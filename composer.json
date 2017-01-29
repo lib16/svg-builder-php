@@ -1,0 +1,23 @@
+{
+	"name": "lib16/svg",
+	"description": "lib16 SVG Builder is a PHP 7 library for creating SVG documents.",
+	"keywords": ["svg", "builder", "writer"],
+	"homepage" : "https://github.com/lib16/svg-builder-php",
+	"license": "MIT",
+	"require": {
+		"php": ">=7.0",
+		"lib16/xml": "^1.0",
+		"lib16/graphics": "^1.0",
+		"lib16/utils": "^1.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Lib16\\SVG\\": "src/"
+		}
+	},
+	"autoload-dev" : {
+		"psr-4": {
+			"Lib16\\SVG\\Tests\\" : "tests/"
+		}
+	}
+}
