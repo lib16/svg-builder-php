@@ -70,6 +70,13 @@ class SvgTest extends XmlTestCase
 				Svg::createSub()->path((new Path())->star($point, 4, 100)),
 				'<path d="M 10,-80 L 110,20 L 10,120 L -90,20 Z"/>'
 			],
+			// image()
+			[
+				Svg::createSub()->image('cat.jpg',
+						new Point(80, 20), 320, 200, PreserveAspectRatio::XMIDYMID()),
+				'<image xlink:href="cat.jpg" x="80" y="20" width="320" height="200"'
+				. ' preserveAspectRatio="xMidYMid"/>'
+			],
 			// text()
 			[
 				Svg::createSub()->text('lorem ipsum', new Point(20, 100)),
