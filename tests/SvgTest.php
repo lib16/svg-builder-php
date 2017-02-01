@@ -240,12 +240,12 @@ class SvgTest extends XmlTestCase
 				Svg::createSub()->text('foo bar')->setDy(-5, 0),
 				'<text dy="-5 0">foo bar</text>'
 			],
-// 			[
-// 				Svg::createSub()->text('foo bar')->setRotate(
-// 						Angle.byDegrees(15), Angle.byDegrees(10),
-// 						Angle.byDegrees(5), Angle.byDegrees(0)),
-// 				'<text rotate="15 10 5 0">foo bar</text>'
-// 			],
+			[
+				Svg::createSub()->text('foo bar')->setRotate(
+						Angle::byDegrees(15), Angle::byDegrees(10),
+						Angle::byDegrees(5), Angle::byDegrees(0)),
+				'<text rotate="15 10 5 0">foo bar</text>'
+			],
 
 			// setViewbox()
 			[

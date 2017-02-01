@@ -317,7 +317,11 @@ class Svg extends Xml
 
 	public function setRotate(Angle ...$rotate): self
 	{
-		$this->attributes->setNumbers('rotate', ' ', static::$formatter, null, ...$rotate);
+		$angles = [];
+		foreach ($rotate as $angle) {
+			$angles[] = $angle->toSvg(static::$degreesFormatter);
+		}
+		$this->attributes->setNumbers('rotate', ' ', static::$formatter, null, ...$angles);
 		return $this;
 	}
 
