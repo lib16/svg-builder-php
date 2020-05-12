@@ -30,7 +30,7 @@ require_once 'vendor/lib16/graphics/src/colors/Colors.php';
 require_once 'vendor/lib16/graphics/src/colors/Colors8Bit.php';
 require_once 'vendor/lib16/graphics/src/geometry/Angle.php';
 require_once 'vendor/lib16/graphics/src/geometry/Point.php';
-require_once 'vendor/lib16/graphics/src/geometry/PointSet.php';
+require_once 'vendor/lib16/graphics/src/geometry/Points.php';
 require_once 'vendor/lib16/graphics/src/geometry/Command.php';
 require_once 'vendor/lib16/graphics/src/geometry/pathcommands/Arc.php';
 require_once 'vendor/lib16/graphics/src/geometry/pathcommands/ClosePath.php';
