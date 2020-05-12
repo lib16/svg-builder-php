@@ -1,23 +1,16 @@
-# `lib16/svg-builder-php`
+# Lib16 SVG Builder for PHP 7
+A library for creating SVG documents written in PHP 7.
 
-lib16 SVG Builder is a PHP 7 library for creating XML documents.
+[![Build Status](https://travis-ci.org/lib16/svg-builder-php.svg?branch=master)](https://travis-ci.org/lib16/svg-builder-php)
 
 ## Installation with Composer
+This package is available on [packagist](https://packagist.org/packages/lib16/svg), so you can use [Composer](https://getcomposer.org) to install it.
+Run the following command in your shell:
 
-Add the following to your project's `composer.json` file:
-```json
-"minimum-stability": "dev",
-"require": {
-    "lib16/svg": "dev-master"
-}
+```
+composer require lib16/svg
 ```
 
-Run `composer update`
-
-Include Composer's `autoload.php`:
-```php
-require_once 'vendor/autoload.php';
-```
 ## Basic Usage
 
 ```php
@@ -27,14 +20,14 @@ require_once 'vendor/autoload.php';
 use Lib16\SVG\Svg;
 use Lib16\Graphics\Geometry\Point;
 
-$dbRows = array(
-        ['month' => '2015-01', 'clicks' => '501'],
-        ['month' => '2015-02', 'clicks' => '560'],
-        ['month' => '2015-03', 'clicks' => '543'],
-        ['month' => '2015-04', 'clicks' => '607'],
-        ['month' => '2015-05', 'clicks' => '646'],
-        ['month' => '2015-06', 'clicks' => '645']
-);
+$dbRows = [
+    ['month' => '2015-01', 'clicks' => '501'],
+    ['month' => '2015-02', 'clicks' => '560'],
+    ['month' => '2015-03', 'clicks' => '543'],
+    ['month' => '2015-04', 'clicks' => '607'],
+    ['month' => '2015-05', 'clicks' => '646'],
+    ['month' => '2015-06', 'clicks' => '645']
+];
 
 $svg = Svg::createSvg(400, 400);
 $svg->defs()->style('.bgr {
@@ -77,8 +70,9 @@ foreach ($dbRows as $i => $row) {
     $graph->setPoints(new Point($x, $y));
     $labels1->tspan($row['clicks'], new Point($x - 10, $y - 15));
     $labels2->tspan(
-            strftime('%b', (new DateTime($row['month']))->getTimestamp()),
-            new Point($x - 10, 350));
+        strftime('%b', (new DateTime($row['month']))->getTimestamp()),
+        new Point($x - 10, 350)
+    );
 }
 print $svg->headerfields('stats');
 print $svg->getMarkup();
