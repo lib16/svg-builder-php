@@ -45,7 +45,6 @@ require_once 'vendor/lib16/graphics/src/geometry/pathcommands/VerticalLineTo.php
 require_once 'vendor/lib16/graphics/src/geometry/PathCommands.php';
 require_once 'vendor/lib16/graphics/src/geometry/Path.php';
 require_once 'vendor/lib16/graphics/src/geometry/BezierPath.php';
-require_once 'vendor/lib16/graphics/src/geometry/VectorGraphics.php';
 
 require_once 'src/Svg.php';
 require_once 'src/enums/PreserveAspectRatio.php';
