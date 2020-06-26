@@ -11,7 +11,7 @@
 	"require" : {
 		"php" : ">=7.0",
 		"lib16/xml" : "^1.0",
-		"lib16/graphics" : "^1.0",
+		"lib16/graphics" : "~2",
 		"lib16/utils" : "^1.0"
 	},
 	"autoload" : {
